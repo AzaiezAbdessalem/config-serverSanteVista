@@ -1,8 +1,8 @@
 eureka:
-  instance:
-    client:
-      serviceUrl:
-        defaultZone: http://localhost:8761/
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/
+
 server:
   port: 8083
 
@@ -10,6 +10,12 @@ spring:
   application:
     name: SanteVista
   cloud:
+    security:
+      oauth2:
+        resourceserver:
+          jwt:
+            issuer-uri: http://localhost:8080/realms/SanteVista
+            jwk-set-uri: http://localhost:8080/realms/SanteVista/protocol/openid-connect/certs
     config:
       enabled: false
   datasource:
