@@ -8,15 +8,15 @@ spring:
     gateway:
       routes:
         #-----------Keycloak---------------------
-          - id: keycloakSanteVista
-            uri: http://localhost:8082
-            predicates:
-              - Path=/api/keycloak/**
+        - id: keycloakSanteVista
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/keycloak/**
         #-----------SanteVista---------------------
-          - id: SanteVista
-            uri: http://localhost:8083
-            predicates:
-              - Path=/api/SanteVista/**
+        - id: SanteVista
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/SanteVista/**
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin
       globalcors:
