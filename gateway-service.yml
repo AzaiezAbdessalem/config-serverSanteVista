@@ -16,7 +16,7 @@ spring:
           - id: SanteVista
             uri: http://localhost:8083
             predicates:
-              - Path=/api/santeVista/**
+              - Path=/api/SanteVista/**
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin
       globalcors:
