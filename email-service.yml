@@ -1,4 +1,4 @@
-urlApp: "http://localhost:4200/"
+urlApp: "http://localhost:4200/verify/"
 
 spring:
 #  config:
